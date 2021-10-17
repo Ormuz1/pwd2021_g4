@@ -161,7 +161,7 @@ function poner_cat() {
 }
 
 
-function preview(datos) {
+function preview() {
     var shtml = '<div class="plantilla' + $("#tit_Plantilla").val() + '">' +
         '<div style="background-image: url(images/cartelera/' + $("#t_file1").val() + ');">' +
         '<header>            <h1>' + $("#tit_titulo").val() + '</h1>        </header>    </div>';

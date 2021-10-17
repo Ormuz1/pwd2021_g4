@@ -128,7 +128,6 @@ function handle_db_operation($tableName, $data, $operation)
     
     else if ($operation == 'actualizar' && $id)
     {
-
         actualizar($tableName, $data,  $id);
     }
     

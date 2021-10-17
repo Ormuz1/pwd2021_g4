@@ -5,6 +5,7 @@
             <li><a href="index.php"><span class="glyphicon glyphicon-home"></span></a></li>
             <li><a href="cartelera.php">Cartelera</a></li>
             <li><a href="libreria.php">Libros</a></li>
+            <li><a href="ayuda.php">Ayuda</a></li>
             <?php 
             if (isset($_SESSION['username']) && $_SESSION['rol']=='administrador'){
                 echo '<li><a href="personas.php">Usuarios</a></li>';
