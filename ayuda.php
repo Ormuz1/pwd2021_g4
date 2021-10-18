@@ -4,7 +4,7 @@
 <head>
     <?php 
         include_once("shared_head.php");
-        include_once("libreria/db_object.php");
+        include_once("funciones_db.php");
     ?>
 </head>
 
@@ -16,7 +16,7 @@
         foreach ($cart as $carteles) {
             echo '<div class="' . $carteles['plantilla'] . '" style="opacity: 1;">';
             if ($carteles['imagen1'] <> "") {
-                $img_h = "images/cartelera/" . $carteles['imagen1'];
+                $img_h = "recursos/imagenes/cartelera/" . $carteles['imagen1'];
                 echo "<div style=\"background-image: url(" . $img_h . ");\"><header>
                <h1>$carteles[titulo]</h1>
                </header></div>";
@@ -35,7 +35,7 @@
 
 
             if ($carteles['imagen'] <> "" && $carteles['texto1'] <> "" && $carteles['texto2'] <> "") {
-                $img = 'images/cartelera/' . $carteles['imagen'];
+                $img = 'recursos/imagenes/cartelera/' . $carteles['imagen'];
                 echo "<div id='cartel_imagen' class='row'>";
                 echo "<div class='col-sm-4'>$carteles[texto1]</div>";
                 echo "<div class='col-sm-4'><img src='$img'></div>";
@@ -43,21 +43,21 @@
                 echo "</div> ";
             }
             if ($carteles['imagen'] <> "" && $carteles['texto1'] == "" && $carteles['texto2'] == "") {
-                $img = 'images/cartelera/' . $carteles['imagen'];
+                $img = 'recursos/imagenes/cartelera/' . $carteles['imagen'];
                 echo "<div id='cartel_imagen' class='row'>";
                 echo "<div class='col-sm-2'>  </div>";
                 echo "<div class='col-sm-10'><img src='$img'></div>";
                 echo "</div> ";
             }
             if ($carteles['imagen'] <> "" && $carteles['texto1'] <> "" && $carteles['texto2'] == "") {
-                $img = 'images/cartelera/' . $carteles['imagen'];
+                $img = 'recursos/imagenes/cartelera/' . $carteles['imagen'];
                 echo "<div id='cartel_imagen' class='row'>";
                 echo "<div class='col-sm-6'>$carteles[texto1]</div>";
                 echo "<div class='col-sm-6'><img src='$img'></div>";
                 echo "</div> ";
             }
             if ($carteles['imagen'] <> "" && $carteles['texto1'] == "" && $carteles['texto2'] <> "") {
-                $img = 'images/cartelera/' . $carteles['imagen'];
+                $img = 'recursos/imagenes/cartelera/' . $carteles['imagen'];
                 echo "<div id='cartel_imagen' class='row'>";
                 echo "<div class='col-sm-6'><img src='$img'></div>";
                 echo "<div class='col-sm-6'>$carteles[texto2]</div>";

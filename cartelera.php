@@ -2,12 +2,12 @@
 <html lang="es">
 <head>
     <?php include_once("shared_head.php"); ?>
-    <link rel="stylesheet" href="bootstrap/css/carteles.css">
+    <link rel="stylesheet" href="recursos/css/carteles.css">
 </head>
 <body>
     <?php
     include_once("navbar.php");
-    include_once("libreria/db_object.php");
+    include_once("funciones_db.php");
 
     $cats = seleccionar("carteles", "DISTINCT categoria");
     ?>

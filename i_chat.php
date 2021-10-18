@@ -23,7 +23,7 @@
     <?php 
         include_once("navbar.php");
 
-        include_once("libreria/motor.php");
+        include_once("motor.php");
         if(isset($_POST['send'])) 
         { 
             if (isset($_SESSION['username'])) {

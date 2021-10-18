@@ -3,7 +3,7 @@
 <head>
     <?php 
     include_once("shared_head.php"); 
-    include_once("libreria/db_object.php");
+    include_once("funciones_db.php");
 
 
     if (!empty($_POST)) 
@@ -31,7 +31,7 @@
             document.getElementById("t_file").value = txt;
         }
     </script>
-    <script src="js/carga_de_datos.js"></script>
+    <script src="recursos/js/carga_de_datos.js"></script>
 </head>
 <body>
     <?php include_once("navbar.php"); ?>

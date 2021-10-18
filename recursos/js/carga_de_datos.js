@@ -18,7 +18,7 @@ $(document).ready(function ()
             dataType: "html",
             beforeSend: function () {
                 //imagen de carga
-                $("#capa_L").html("<p align='center'><img src='images/ajax-loader.gif' /></p>");
+                $("#capa_L").html("<p align='center'><img src='recursos/imagenes/ajax-loader.gif' /></p>");
             },
             error: function () {
                 alert("error petición ajax");
@@ -38,7 +38,7 @@ function cargar(div, desde) {
 
 
 function cargar_archivo(archivo, tipo) {
-    var ruta = "libros_d/" + archivo;
+    var ruta = "recursos/libros_d/" + archivo;
     $.ajax({
         type: "POST",
         url: "ver_archivo.php",
@@ -183,7 +183,7 @@ function poner_cat() {
 
 function preview() {
     var shtml = '<div class="plantilla' + $("#tit_Plantilla").val() + '">' +
-        '<div style="background-image: url(images/cartelera/' + $("#t_file1").val() + ');">' +
+        '<div style="background-image: url(recursos/imagenes/cartelera/' + $("#t_file1").val() + ');">' +
         '<header>            <h1>' + $("#tit_titulo").val() + '</h1>        </header>    </div>';
 
     if ($("#tit_link").val() != '') {
@@ -195,7 +195,7 @@ function preview() {
     if ($("#t_file").val() != '' && $("#aut_texto1").val() != '' && $("#aut_texto2").val() != '') {
         shtml = shtml + '<div id="cartel_imagen" class="row">' +
             '<div class="col-sm-4">' + $("#aut_texto1").val() + '</div>' +
-            '<div class="col-sm-4"><img src="images/cartelera/' + $("#t_file").val() + '">' +
+            '<div class="col-sm-4"><img src="recursos/imagenes/cartelera/' + $("#t_file").val() + '">' +
             '</div> <div class="col-sm-4">' + $("#aut_texto2").val() + '</div>' +
             '</div>';
     }
@@ -203,20 +203,20 @@ function preview() {
     if ($("#t_file").val() != '' && $("#aut_texto1").val() == '' && $("#aut_texto2").val() == '') {
         shtml = shtml + '<div id="cartel_imagen" class="row">' +
             '<div class="col-sm-2">' + '  ' + '</div>' +
-            '<div class="col-sm-10"><img src="images/cartelera/' + $("#t_file").val() + '">' +
+            '<div class="col-sm-10"><img src="recursos/imagenes/cartelera/' + $("#t_file").val() + '">' +
             '</div>';
     }
 
     if ($("#t_file").val() != '' && $("#aut_texto1").val() != '' && $("#aut_texto2").val() == '') {
         shtml = shtml + '<div id="cartel_imagen" class="row">' +
             '<div class="col-sm-6">' + $("#aut_texto1").val() + '</div>' +
-            '<div class="col-sm-6"><img src="images/cartelera/' + $("#t_file").val() + '">' +
+            '<div class="col-sm-6"><img src="recursos/imagenes/cartelera/' + $("#t_file").val() + '">' +
             '</div>';
     }
 
     if ($("#t_file").val() != '' && $("#aut_texto1").val() == '' && $("#aut_texto2").val() != '') {
         shtml = shtml + '<div id="cartel_imagen" class="row">' +
-            '<div class="col-sm-6"><img src="images/cartelera/' + $("#t_file").val() + '">' +
+            '<div class="col-sm-6"><img src="recursos/imagenes/cartelera/' + $("#t_file").val() + '">' +
             '</div> <div class="col-sm-6">' + $("#aut_texto2").val() + '</div>' +
             '</div>';
     }

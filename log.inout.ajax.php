@@ -1,5 +1,5 @@
 <?php
-include_once("libreria/motor.php");
+include_once("motor.php");
 session_start();
 if ( !isset($_SESSION['username']) && !isset($_SESSION['userid']) ){
     if ( $idcnx = mysqli_connect(DB_HOST,DB_USER,DB_PASS,DB_NAME)){

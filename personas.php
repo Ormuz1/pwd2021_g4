@@ -3,7 +3,7 @@
 <head>
     <?php 
         include_once("shared_head.php"); 
-        include_once("libreria/db_object.php");
+        include_once("funciones_db.php");
         
         
         if (!isset($_SESSION['username']) || $_SESSION['rol']!='administrador')
@@ -23,7 +23,7 @@
             header("Location: {$_SERVER['REQUEST_URI']}", true, 303);
         }
     ?>
-    <script src="js/carga_de_datos.js"></script>
+    <script src="recursos/js/carga_de_datos.js"></script>
     <script>
         $(document).ready(function ()
         {

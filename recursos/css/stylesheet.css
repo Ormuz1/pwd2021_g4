@@ -83,7 +83,7 @@ body{
     display: inline-block;
     width: 12px;
     height: 12px;
-    background-image: url('images/ajax-loader.gif');
+    background-image: url('recursos/imagenes/ajax-loader.gif');
     background-position: 50% 50%;
     background-repeat: no-repeat;
 }

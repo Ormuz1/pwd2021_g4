@@ -3,8 +3,8 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
         <title>Registro de usuarios con PHP y Ajax</title>
-        <link rel="stylesheet" type="text/css" href="bootstrap/css/stylesheet.css" />
-		<script src="js/functions.ajax.js"></script>
+        <link rel="stylesheet" type="text/css" href="recursos/css/stylesheet.css" />
+		<script src="recursos/js/functions.ajax.js"></script>
     </head>
     <body>
 	<div id="allContent"><table cellpadding="0" cellspacing="0" border="0" height="100%" width="100%"><tr><td align="center" valign="middle" height="100%" width="100%">

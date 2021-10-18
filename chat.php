@@ -1,6 +1,6 @@
 <br>
 <?php 
-include_once("libreria/motor.php");
+include_once("motor.php");
 function formatDate($date)
 {
 	return date('g:i a', strtotime($date));

@@ -1,5 +1,5 @@
 <?php
-include_once("libreria/db_object.php");
+include_once("funciones_db.php");
 
 $str_b =  $_GET['b'];
 $pers = buscar("personas", $str_b, array("carrera", "user", "nombre", "apellido", "dni"));

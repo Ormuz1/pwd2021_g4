@@ -1,5 +1,5 @@
 <?php
-include_once("libreria/db_object.php");
+include_once("funciones_db.php");
 session_start();
 $str_b =  isset($_GET["b"]) ? $_GET["b"] : NULL;
 $libros = buscar("libros_d", $str_b, array("autor", "titulo", "tipo", "area", "materia", "archivo"), "titulo");
@@ -26,7 +26,7 @@ if (isset($libros))
                     {
                         echo "
                             <tr>
-                            <td><a href='libros_d/" . $libro['archivo'] . "' target='_blank' >$libro[titulo]</a></td>
+                            <td><a href='recursos/libros_d/" . $libro['archivo'] . "' target='_blank' >$libro[titulo]</a></td>
                             <td>$libro[autor]</td>
                             <td>$libro[tipo]</td>
                         ";

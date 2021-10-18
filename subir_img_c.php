@@ -1,6 +1,6 @@
 <?php
 if($_SERVER['REQUEST_METHOD'] == "POST" && (isset($_FILES["fileToUpload"]["type"]) ||isset($_FILES["fileToUpload1"]["type"])) ){
-$target_dir = "images/cartelera/";
+$target_dir = "recursos/imagenes/cartelera/";
 $carpeta=$target_dir;
 if (!file_exists($carpeta)) {
     mkdir($carpeta, 0777, true);

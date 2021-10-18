@@ -1,5 +1,5 @@
 <?php
-include_once("libreria/db_object.php");
+include_once("funciones_db.php");
 
 
 $cats = seleccionar("carteles", "DISTINCT categoria");
@@ -135,7 +135,7 @@ if (!empty($_POST))
                             <label>Plantilla</label>
                             <select name="plantilla" class="form-control" id="tit_Plantilla" onchange="preview();">
                                 <?php
-                                $plantillas = traer_nombres_plantillas("bootstrap/css/carteles.css");
+                                $plantillas = traer_nombres_plantillas("recursos/css/carteles.css");
                                 $plantilla_seleccionada = $operacion == "alta" ? $plantillas[0] : $cartel_actual["plantilla"];
                                 for($i = 0; $i < count($plantillas); $i++)
                                 {

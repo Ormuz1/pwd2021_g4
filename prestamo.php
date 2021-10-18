@@ -1,5 +1,5 @@
 <?php
-include_once("libreria/db_object.php");
+include_once("funciones_db.php");
 $id = $_POST['id_lib'];
 $A = traer_datos("libros_d", $id);
 

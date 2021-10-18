@@ -1,7 +1,7 @@
 <?php
     	
-    include_once("libreria/motor.php");
-	include_once("libreria/libro_d.php");
+    include_once("motor.php");
+	include_once("libro_d.php");
     session_start();
     
     //get search term

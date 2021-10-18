@@ -14,7 +14,7 @@
             });
         });
     </script>
-    <link rel="stylesheet" href="bootstrap/css/carteles.css">
+    <link rel="stylesheet" href="recursos/css/carteles.css">
 </head>
 <body>
     <?php include_once("navbar.php"); ?>
@@ -26,11 +26,11 @@
                     <H3>BIBLIOTECA T1</H3>
                     <H4>Publicaciones Digitales</H4>
                     <ul class="nav nav-pills nav-stacked">
-                        <li onclick="$('#capa_C').load('txts/origen.html')"><a href="#"><span>Origen</span></a></li>
-                        <li onclick="$('#capa_C').load('txts/objetivo.html')"><a href="#"><span>Objetivo</span></a></li>
-                        <li onclick="$('#capa_C').load('txts/tecnologias.html')"><a href="#"><span>Tecnologias</span></a></li>
-                        <li onclick="$('#capa_C').load('txts/proyectos.html')"><a href="#"><span>Proyectos</a></span></li>
-                        <li onclick="$('#capa_C').load('txts/referencias.html')"><a href="#"><span>Referencias</a></span></li>
+                        <li onclick="$('#capa_C').load('recursos/txts/origen.html')"><a href="#"><span>Origen</span></a></li>
+                        <li onclick="$('#capa_C').load('recursos/txts/objetivo.html')"><a href="#"><span>Objetivo</span></a></li>
+                        <li onclick="$('#capa_C').load('recursos/txts/tecnologias.html')"><a href="#"><span>Tecnologias</span></a></li>
+                        <li onclick="$('#capa_C').load('recursos/txts/proyectos.html')"><a href="#"><span>Proyectos</a></span></li>
+                        <li onclick="$('#capa_C').load('recursos/txts/referencias.html')"><a href="#"><span>Referencias</a></span></li>
                     </ul>
                 </div>
             </div>

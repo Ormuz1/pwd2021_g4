@@ -1,5 +1,5 @@
 <?php
-include_once("libreria/db_object.php");
+include_once("funciones_db.php");
 $str_b =  $_GET['b'];
 $cart = buscar("carteles", $str_b, array("categoria", "titulo", "texto", "link"), "titulo");
 ?>

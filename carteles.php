@@ -3,7 +3,7 @@
 <head>
     <?php 
         include_once("shared_head.php"); 
-        include_once("libreria/db_object.php");
+        include_once("funciones_db.php");
         if (!empty($_POST)) 
         {
             $copiaPOST = $_POST;
@@ -12,7 +12,7 @@
             header("Location: {$_SERVER['REQUEST_URI']}", true, 303);
         }
     ?>
-    <script src="js/carga_de_datos.js"></script>
+    <script src="recursos/js/carga_de_datos.js"></script>
     <script>
         $(document).ready(function ()
         {
@@ -33,7 +33,7 @@
             document.getElementById(f[id]).value = txt;
         }   
     </script>
-    <link rel="stylesheet" href="bootstrap/css/carteles.css">
+    <link rel="stylesheet" href="recursos/css/carteles.css">
 </head>
 <body>
     <?php include_once("navbar.php");?>

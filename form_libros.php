@@ -1,5 +1,5 @@
 ﻿<?php
-include_once("libreria/db_object.php");
+include_once("funciones_db.php");
 $libro_actual;
 if (!empty($_POST)) 
 {

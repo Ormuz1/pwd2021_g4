@@ -1,7 +1,7 @@
 <?php
 //https://www.w3schools.com/php/php_file_upload.asp
 //modificar php.ini : file_uploads = On
-$target_dir = "libros_d/";
+$target_dir = "recursos/libros_d/";
 $target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
 $uploadOk = 1;
 $imageFileType = pathinfo($target_file,PATHINFO_EXTENSION);

@@ -9,9 +9,9 @@
         <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
         <title>Login y Logout de usuarios con PHP y Ajax</title>
         <link rel="stylesheet" type="text/css" href="bootstrap/css/stylesheet.css" />
-        <script src="js/jquery-3.1.0.min.js"></script>
-        <script src="js/bootstrap.min.js"></script>
-		<script src="js/functions.ajax.js"></script>
+        <script src="recursos/js/jquery-3.1.0.min.js"></script>
+        <script src="recursos/js/bootstrap.min.js"></script>
+		<script src="recursos/js/functions.ajax.js"></script>
     </head>
     <body><div id="allContent"><table cellpadding="0" cellspacing="0" border="0" height="100%" width="100%"><tr><td align="center" valign="middle" height="100%" width="100%">
          
