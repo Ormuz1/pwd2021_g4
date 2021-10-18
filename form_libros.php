@@ -85,15 +85,16 @@ if (!empty($_POST))
 
 							<div class="col-xs-4">
 								<label>Tipo</label>
-								<select class="form-control" name="tipo">
-									<option><?php echo $libro_actual["tipo"] ?? ""; ?></option>
-									<option>Libro</option>
-									<option>Revista</option>
-									<option>Video</option>
-									<option>Audio</option>
-									<option>AudioTexto</option>
-									<option>Otros</option>
-								</select>
+                                <select class="form-control" name="txtTipo" id="txtTipo">
+                                    <?php 
+                                    // PARA HACER: Arreglar esta pedazo de mierda.
+                                    $tiposValidos = ["Libro Digital", "Libro Fisico", "Video", "Audio", "Texto"];
+                                    foreach ($tiposValidos as $tipoActual)
+                                    {   
+                                        echo "<option " . ($tipoActual == $tipo ? "selected" : "") . ">$tipoActual</option>";
+                                    }
+                                    ?>
+                                </select>
 							</div>
 						</div>
 

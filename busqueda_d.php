@@ -2,7 +2,7 @@
 include_once("libreria/db_object.php");
 session_start();
 $str_b =  isset($_GET["b"]) ? $_GET["b"] : NULL;
-$libros = buscar("libros_d", $str_b, array("autor", "titulo", "tipo", "area", "materia"), "titulo");
+$libros = buscar("libros_d", $str_b, array("autor", "titulo", "tipo", "area", "materia", "archivo"), "titulo");
 
 ?>
 <?php
@@ -47,7 +47,10 @@ if (isset($libros))
                         } else {
                             echo '<td><button class="btn btn-primary btn-xs" onclick="ver_info(' . $libro['id_libro'] . ')" >Info</button></td>';
                         }
-                        echo '<td><button class="btn btn-primary btn-xs" onclick="cargar_pdf(\'#capa_d\', \'libros_d/' . $file_l . '\')" >Min</button></td>';
+                        if(array_key_exists("archivo", $libro))
+                        {
+                            echo "<td><button class='btn btn-primary btn-xs' onclick='cargar_archivo(\"{$libro['archivo']}\", \"{$libro['tipo']}\")'>Min</button></td>";
+                        }                        
                         echo " </tr> ";
                     }
                     ?>

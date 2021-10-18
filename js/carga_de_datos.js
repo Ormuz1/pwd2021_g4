@@ -37,13 +37,14 @@ function cargar(div, desde) {
 }
 
 
-function cargar_pdf(div, desde) {
+function cargar_archivo(archivo, tipo) {
+    var ruta = "libros_d/" + archivo;
     $.ajax({
         type: "POST",
-        url: "ver_pdf.php",
-        data: { archivo: desde }
+        url: "ver_archivo.php",
+        data: { archivo: ruta, tipo: tipo }
     }).done(function (html) {
-        $(div).html(html);
+        $("#capa_d").html(html);
     });
 }
 
