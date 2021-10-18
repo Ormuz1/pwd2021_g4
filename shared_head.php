@@ -9,3 +9,9 @@
 <link rel="stylesheet" href="bootstrap/css/style_chat.css" media="all"/>	
 <link rel="stylesheet" href="bootstrap/ui/jquery-ui.css">
 <link rel="stylesheet" href="bootstrap/css/cust.css">
+<?php
+    if (isset($_SESSION['username']) && $_SESSION['rol'] == 'administrador') 
+    {
+        echo "<script src='js/contador_usuarios.js'> </script>";
+    }
+?>

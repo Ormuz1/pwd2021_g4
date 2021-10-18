@@ -1,0 +1,1 @@
+"C:\xampp\php\php.exe" -q C:\xampp\htdocs\pwd2021_g4\contador_usuarios.php 

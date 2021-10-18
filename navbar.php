@@ -17,6 +17,7 @@
         <ul class="nav navbar-nav navbar-right" style="padding-right: 10px;">
             <?php 
             if (isset($_SESSION['username'])) {
+                echo " <li class='navbar-brand'>Cantidad de usuarios conectados: <span id='contador_usuarios'></span></li>";
                 echo ' <li class="navbar-brand">'.$_SESSION['rol'].' : '.$_SESSION['username'].'</li>'; 
             }
             if (!isset($_SESSION['username'])) {
