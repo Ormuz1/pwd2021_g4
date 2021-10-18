@@ -4,8 +4,11 @@
     <?php 
     include_once("shared_head.php"); 
     include_once("libreria/db_object.php");
+
+
     if (!empty($_POST)) 
     {
+        debug_to_console($_POST);
         handle_db_operation("libros_d", $_POST, $_GET["operacion"] ?? NULL);
         header("Location: {$_SERVER['REQUEST_URI']}", true, 303);
     }

@@ -32,7 +32,16 @@ if (isset($libros))
                         ";
 
                         $file_l = $libro['archivo'];
-                        if (isset($_SESSION['username']) && $_SESSION['rol'] == 'administrador') {
+                        if (isset($_SESSION['username']) && $_SESSION['rol'] == 'administrador') 
+                        {
+                            if($libro['tipo'] == "Libro Fisico")
+                            {
+                                if ($libro['prestado'] == 1) {
+                                    echo '<td><button class="btn btn-primary btn-xs" onclick="devolver(' . $libro['id_libro'] . ')")>Devolver</button></td>';
+                                } else {
+                                    echo '<td><button class="btn btn-primary btn-xs" onclick="prestar(' . $libro['id_libro'] . ')")>Prestar</button></td>';
+                                }
+                            }
                             echo '<td><button class="btn btn-primary btn-xs" onclick="editar(' . $libro['id_libro'] . ')" >Editar</button></td>';
                             echo '<td><button class="btn btn-primary btn-xs" onclick="borrar(' . $libro['id_libro'] . ')" >Borrar</button></td>';
                         } else {

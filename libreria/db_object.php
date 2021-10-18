@@ -4,7 +4,13 @@ define ('DB_USER','root');
 define ('DB_PASS','');
 define ('DB_NAME','biblio_t1');
 $objConexion = new mysqli(DB_HOST,DB_USER,DB_PASS,DB_NAME);
+function debug_to_console($data) {
+    $output = $data;
+    if (is_array($output))
+        $output = implode(',', $output);
 
+    echo "<script>console.log('Debug Objects: " . $output . "' );</script>";
+}
 
 function guardar($nombreTabla, $datosFila)
 {
@@ -135,8 +141,9 @@ function handle_db_operation($tableName, $data, $operation)
     {
         borrar($tableName,  $id);
     }
-    elseif ($operation == 'prestar' && $id)
+    else if ($operation == 'prestar' && $id)
     {
+        debug_to_console("prestando");
         $magnitud = "";
         switch($_POST['magnitud_tiempo'])
         {
@@ -152,11 +159,11 @@ function handle_db_operation($tableName, $data, $operation)
             
             }
         $fecha_devolucion = (new DateTime())->add(new DateInterval("P{$_POST['cantidad_tiempo']}$magnitud"))->format("Y-m-d");
-        $query1 = "UPDATE libros_d SET prestado = 1 WHERE libros_d.id_libro = {$_GET['id_lib']}";
-        $query2 = "INSERT INTO prestamos_libros(fecha_devolucion, libro_prestado, receptor_prestamo) VALUES ('$fecha_devolucion', {$_GET['id_lib']}, {$_POST['receptor']})";
+        $query1 = "UPDATE libros_d SET prestado = 1 WHERE libros_d.id_libro = {$id}";
+        $query2 = "INSERT INTO prestamos_libros(fecha_devolucion, libro_prestado, receptor_prestamo) VALUES ('$fecha_devolucion', {$id}, {$_POST['receptor']})";
 
-        mysqli_query($GLOBALS["objConexion"]->enlace, $query1);
-        mysqli_query($GLOBALS["objConexion"]->enlace, $query2);
+        mysqli_query($GLOBALS["objConexion"], $query1);
+        mysqli_query($GLOBALS["objConexion"], $query2);
     }
 }
 

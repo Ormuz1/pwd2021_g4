@@ -47,6 +47,25 @@ function cargar_pdf(div, desde) {
     });
 }
 
+function prestar(id) {
+    $.ajax({
+        type: "POST",
+        url: "prestamo.php",
+        data: { id_lib: id }
+    }).done(function (html) {
+        $('#capa_d').html(html);
+    });
+}
+
+function devolver(id) {
+    $.ajax({
+        type: "POST",
+        url: "devolucion.php",
+        data: { id_lib: id }
+    }).done(function (html) {
+        $("#capa_d").html(html);
+    })
+}
 
 function editar(id) {
 
